@@ -1,335 +1,241 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Elders' Drinking Song | Canto de los ancianos | Música Amis</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elders' Drinking Song | Huggia Art & Soul</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #FDFBF7;        /* 明信片底色 */
+            --primary-text: #3D3834;    /* 深暖棕 */
+            --accent-color: #8C7E6D;    /* 大地灰褐 */
+            --button-bg: #FFFFFF;       
+            --button-border: #E0D9CE;   
+            --hover-bg: #F9F7F2;        
+            --shadow: 0 4px 20px rgba(61, 56, 52, 0.05);
+        }
 
-    body {
-      background: linear-gradient(145deg, #d8eed8 0%, #bcddae 100%);
-      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', system-ui, -apple-system, sans-serif;
-      color: #1d3b2a;
-      line-height: 1.5;
-      padding: 2rem 1.5rem;
-      min-height: 100vh;
-    }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    .container {
-      max-width: 880px;
-      margin: 0 auto;
-      background-color: #f6fef2;
-      border-radius: 48px;
-      box-shadow: 0 25px 40px -14px rgba(40, 60, 20, 0.35);
-      overflow: hidden;
-      padding: 2rem 2rem 2.8rem;
-      transition: all 0.2s ease;
-      border: 1px solid rgba(100, 140, 70, 0.3);
-      backdrop-filter: blur(0px);
-    }
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(#E8E2D6 0.7px, transparent 0.7px);
+            background-size: 24px 24px;
+            color: var(--primary-text);
+            font-family: 'PingFang TC', 'Noto Sans TC', -apple-system, sans-serif;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
 
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 800;
-      letter-spacing: -0.3px;
-      color: #1f543b;
-      border-left: 6px solid #6f9e3f;
-      padding-left: 1.2rem;
-      margin-bottom: 0.6rem;
-      line-height: 1.2;
-      text-shadow: 0 1px 1px rgba(140, 180, 80, 0.2);
-    }
+        .container {
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+        }
 
-    .subhead {
-      font-size: 1.28rem;
-      font-weight: 540;
-      color: #497e48;
-      margin-bottom: 0.9rem;
-      padding-left: 1.2rem;
-      background: linear-gradient(90deg, #e2f3da, transparent);
-      display: inline-block;
-      border-radius: 60px;
-      padding: 0.2rem 1rem 0.2rem 1.2rem;
-    }
+        /* 頂部 Logo */
+        .logo-container {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 30px auto;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
+        }
 
-    .meta-line {
-      font-size: 0.85rem;
-      color: #5e7c4a;
-      margin: 0.9rem 0 0.4rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-    }
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
 
-    .date-tag {
-      background-color: #e4f5da;
-      padding: 0.25rem 0.9rem;
-      border-radius: 40px;
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #306e3a;
-      box-shadow: inset 0 0 0 1px #cde2bc;
-    }
+        header { margin-bottom: 35px; }
 
-    .description {
-      margin: 1.2rem 0 1.6rem 0;
-      font-size: 1rem;
-      color: #2b5436;
-      background: #effbe7;
-      padding: 1.2rem 1.4rem;
-      border-radius: 28px;
-      border: 1px solid #cde0bc;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.02);
-    }
+        h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 0.1rem;
+            margin-bottom: 8px;
+            color: var(--primary-text);
+        }
 
-    .description p {
-      margin-bottom: 0.7rem;
-    }
+        .subhead {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            letter-spacing: 0.05rem;
+            margin-bottom: 20px;
+        }
 
-    .enjoy-emoji {
-      font-size: 1.2rem;
-      letter-spacing: 2px;
-      margin-top: 0.25rem;
-    }
+        .divider {
+            width: 30px;
+            height: 1.5px;
+            background-color: var(--accent-color);
+            margin: 20px auto;
+            opacity: 0.3;
+        }
 
-    .video-section {
-      margin: 2rem 0 1.8rem 0;
-      border-radius: 32px;
-      background: #eef7e6;
-      padding: 1rem 1rem 1rem 1rem;
-      box-shadow: 0 6px 14px rgba(70, 100, 40, 0.1);
-    }
+        /* 內容描述區 */
+        .description-card {
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid var(--button-border);
+            padding: 24px;
+            border-radius: 18px;
+            text-align: left;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
 
-    .video-caption {
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 0.85rem;
-      padding-left: 0.5rem;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+        .description-card strong { color: var(--primary-text); }
+        .description-card p { margin-bottom: 12px; }
 
-    .video-caption span:first-child {
-      background: #558b2f;
-      color: white;
-      padding: 0.25rem 1rem;
-      border-radius: 100px;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
+        /* 影片區塊 */
+        .video-section {
+            margin-bottom: 40px;
+        }
 
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background-color: #1e2a1a;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.25);
-      margin: 0.5rem 0 0.7rem 0;
-    }
+        .video-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
 
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(61, 56, 52, 0.1);
+            background: #000;
+        }
 
-    .video-attribution {
-      font-size: 0.75rem;
-      text-align: center;
-      color: #5e806a;
-      margin-top: 0.7rem;
-      font-weight: 500;
-    }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
 
-    .instagram-btn-container {
-      display: flex;
-      justify-content: center;
-      margin: 2rem 0 1rem;
-    }
+        /* 按鈕區域 */
+        .cta-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 20px;
+        }
 
-    .insta-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      background: linear-gradient(105deg, #1b5e2a, #2e7d32, #4caf50);
-      padding: 0.85rem 2.2rem;
-      border-radius: 80px;
-      color: white;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.05rem;
-      box-shadow: 0 10px 18px -6px #2c5a2ac4;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border: none;
-      cursor: pointer;
-      letter-spacing: 0.3px;
-    }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 24px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 0.05rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
 
-    .insta-link:hover {
-      transform: scale(1.02);
-      box-shadow: 0 14px 22px -8px #1e4a1ebb;
-      background: linear-gradient(105deg, #2b6e30, #3e9142);
-    }
+        /* 官網主按鈕 */
+        .btn-primary {
+            background-color: var(--primary-text);
+            color: #FFFFFF;
+            font-weight: 500;
+            box-shadow: 0 8px 20px rgba(61, 56, 52, 0.15);
+        }
 
-    .insta-link:active {
-      transform: scale(0.97);
-    }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+            box-shadow: 0 12px 25px rgba(61, 56, 52, 0.2);
+        }
 
-    .insta-icon {
-      width: 24px;
-      height: 24px;
-      fill: white;
-      display: inline-block;
-    }
+        /* IG 按鈕 */
+        .btn-secondary {
+            background-color: var(--button-bg);
+            border: 1px solid var(--button-border);
+            color: var(--primary-text);
+            box-shadow: var(--shadow);
+        }
 
-    .discover-text {
-      text-align: center;
-      margin-top: 1.8rem;
-      font-size: 0.95rem;
-      color: #57945c;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      background: #e2f0d8;
-      display: inline-block;
-      padding: 0.3rem 1.8rem;
-      border-radius: 60px;
-      backdrop-filter: blur(2px);
-    }
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            background-color: var(--hover-bg);
+            border-color: var(--accent-color);
+        }
 
-    .divider {
-      width: 70px;
-      height: 3px;
-      background: #abd47e;
-      margin: 1.8rem auto 1rem;
-      border-radius: 6px;
-    }
+        .btn i {
+            position: absolute;
+            left: 20px;
+            font-size: 1.1rem;
+        }
 
-    .footer-note {
-      font-size: 0.7rem;
-      text-align: center;
-      color: #6b8c5c;
-      margin-top: 1.5rem;
-      font-weight: 500;
-    }
+        footer {
+            margin-top: 60px;
+            font-size: 0.75rem;
+            color: var(--accent-color);
+            letter-spacing: 0.1rem;
+            opacity: 0.6;
+        }
 
-    @media (max-width: 620px) {
-      body {
-        padding: 1.2rem;
-      }
-      .container {
-        padding: 1.5rem;
-      }
-      h1 {
-        font-size: 1.8rem;
-      }
-      .subhead {
-        font-size: 1rem;
-      }
-      .description {
-        padding: 0.9rem 1rem;
-      }
-      .insta-link {
-        padding: 0.7rem 1.6rem;
-        font-size: 0.9rem;
-      }
-    }
-
-    .highlight-green {
-      background: linear-gradient(120deg, #e1f5d5, #cbe6bc);
-      border-radius: 24px;
-    }
-  </style>
+        @media (max-width: 480px) {
+            h1 { font-size: 1.7rem; }
+        }
+    </style>
 </head>
 <body>
 
 <div class="container">
-  
-  <h1>Elders' Drinking Song</h1>
-  <div class="subhead">Canto de celebración de los ancianos (Taiwan)</div>
-  
-  <div class="meta-line">
-    <span class="date-tag">🎵 Desde los sonidos de los pueblos originarios de Taiwán.</span>
-    <span class="date-tag">📅 Fecha de lanzamiento: 7 de octubre de 1998</span>
-  </div>
-  
-  <div class="description">
-    <p>Estás escuchando el canto tradicional del pueblo Amis de Falangaw, <strong>"Elders' Drinking Song" (Canto de celebración de los ancianos)</strong>, interpretado por Difang Duana, Igyu Duana y el Coro Malan.</p>
-    <p class="enjoy-emoji">¡Espero que lo disfrutes! 🎵🎶🎼</p>
-  </div>
-  
-  <div style="margin-top: 0.3rem;">
-    <h2 style="font-size: 1.35rem; font-weight: 700; color: #2c7840; margin-bottom: 0.2rem;">Elders Drinking Song (Original Recording) 老人飲酒歌</h2>
-    <div style="font-size: 0.9rem; color: #5d8c58; margin-bottom: 0.9rem; font-weight: 500;">郭英男和馬蘭吟唱隊 · 滾石唱片</div>
-  </div>
-  
-  <div class="video-section">
-    <div class="video-caption">
-      <span>🎬 VIDEO ORIGINAL</span>
-      <span>🔊 Escucha la tradición</span>
+    <header>
+        <div class="logo-container">
+            <img src="https://res.cloudinary.com/dhzabt1xr/image/upload/f_auto,q_auto/v1778185374/final_transparent_under1mb_mj2z57.png" alt="Huggia Logo">
+        </div>
+        <h1>Elders' Drinking Song</h1>
+        <div class="subhead">Canto de celebración de los ancianos</div>
+        <div class="divider"></div>
+    </header>
+
+    <div class="description-card">
+        <p>Estás escuchando el canto tradicional del pueblo Amis de Falangaw, <strong>"Elders' Drinking Song"</strong>, interpretado por Difang Duana, Igyu Duana y el Coro Malan.</p>
+        <p style="font-style: italic; color: var(--accent-color);">From Taiwanese aboriginal sounds. Released on: 1998-10-07.</p>
     </div>
-    <div class="video-wrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/4FlxHvPlvU8?si=wn3op5_6g6JOF_M7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <div class="video-section">
+        <div class="video-title">
+            <i class="fa-solid fa-play-circle" style="color: var(--accent-color);"></i>
+            <span>🔊 Escucha la tradición</span>
+        </div>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/4FlxHvPlvU8?si=wn3op5_6g6JOF_M7" title="YouTube video player" allowfullscreen></iframe>
+        </div>
     </div>
-    <div class="video-attribution">
-      🎵 Grabación original — Falangaw Amis: Difang Duana, Igyu Duana, Coro Malan
+
+    <div class="cta-wrapper">
+        <a href="https://huggia.vercel.app/" class="btn btn-primary">
+            <i class="fa-solid fa-house-chimney"></i>
+            <span>EXPLORAR HUGGIA</span>
+        </a>
+
+        <a href="https://www.instagram.com/huggia.bcn?igsh=MWhkYnRpNHNmbWdzNA==" target="_blank" class="btn btn-secondary">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Follow on Instagram</span>
+        </a>
     </div>
-  </div>
-  
-  <div class="description" style="background: #f0fbe8; margin-top: 0.2rem;">
-    <p>From Taiwanese aboriginal sounds.<br>
-    Released on: 1998-10-07.<br>
-    You are listening to Falangaw Amis people's traditional chant <strong>"Elders' Drinking Song"</strong> by Difang Duana, Igyu Duana, and Malan Choir.</p>
-    <p class="enjoy-emoji">Hope you enjoy !!! 🎵🎼🎶🎼</p>
-  </div>
-  
-  <div style="display: flex; flex-direction: column; align-items: center; margin-top: 1rem;">
-    <div class="instagram-btn-container">
-      <a href="https://www.instagram.com/huggia.bcn?igsh=MWhkYnRpNHNmbWdzNA==" target="_blank" rel="noopener noreferrer" class="insta-link" id="instagramButton">
-        <svg class="insta-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.311.976.976 1.25 2.242 1.311 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.311 3.608-.976.976-2.242 1.25-3.608 1.311-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.976-.976-1.25-2.242-1.311-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.336-2.633 1.311-3.608.976-.976 2.242-1.25 3.608-1.311 1.266-.058 1.646-.07 4.85-.07zM12 0C8.742 0 8.334.014 7.054.072 4.506.192 2.297.764 1.13 1.931.086 2.975-.033 5.142-.072 7.054-.014 8.334 0 8.742 0 12s.014 3.666.072 4.946c.192 2.548.764 4.757 1.93 5.924 1.167 1.167 3.376 1.739 5.924 1.93 1.28.058 1.688.072 4.946.072s3.666-.014 4.946-.072c2.548-.192 4.757-.764 5.924-1.93 1.167-1.167 1.739-3.376 1.93-5.924.058-1.28.072-1.688.072-4.946s-.014-3.666-.072-4.946c-.192-2.548-.764-4.757-1.93-5.924C21.019.764 18.81.192 16.262.072 14.982.014 14.574 0 11.258 0h.742z"/>
-          <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-        </svg>
-        Follow me on Instagram
-      </a>
-    </div>
-    <div class="discover-text">
-      📸 Discover other Art · Huggia BCN
-    </div>
-  </div>
-  
-  <div class="divider"></div>
-  <div class="footer-note">
-    🌿 Canto tradicional Amis de Falangaw — Raíces vivas · Música ancestral
-  </div>
+
+    <footer>
+        &copy; 2026 HUGGIA. BCN
+    </footer>
 </div>
 
-<script>
-  (function() {
-    console.log("Elders' Drinking Song — Diseño renovado en verde claro · Video oficial integrado");
-    const instaBtn = document.getElementById('instagramButton');
-    if (instaBtn) {
-      instaBtn.addEventListener('click', (e) => {
-        const url = instaBtn.getAttribute('href');
-        if (url && url.includes('instagram.com')) {
-          window.open(url, '_blank', 'noopener,noreferrer');
-        }
-      });
-    }
-  })();
-</script>
 </body>
 </html>
