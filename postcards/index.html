@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huggia Postcards | Postales desde Perú</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #FDFBF7;
+            --primary-text: #3D3834;
+            --accent-color: #8C7E6D;
+            --button-bg: #FFFFFF;
+            --button-border: #E0D9CE;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(#E8E2D6 0.7px, transparent 0.7px);
+            background-size: 24px 24px;
+            color: var(--primary-text);
+            font-family: 'PingFang TC', 'Noto Sans TC', sans-serif;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container { max-width: 400px; width: 100%; text-align: left; }
+
+        header { margin-bottom: 25px; text-align: center; }
+
+        .logo-container {
+            width: 70px; height: 70px; margin: 0 auto 20px auto;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.08));
+        }
+
+        .logo-container img { width: 100%; height: 100%; border-radius: 50%; object-fit: contain; }
+
+        .header-info { margin-bottom: 25px; padding: 0 10px; text-align: left; }
+        
+        .tag {
+            font-size: 0.7rem;
+            letter-spacing: 0.2rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        h2 { font-size: 1.5rem; font-weight: 500; margin-bottom: 5px; letter-spacing: 0.02rem; line-height: 1.3; }
+
+        .postcard-preview {
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(61, 56, 52, 0.12);
+            background: #fff;
+            padding: 8px;
+        }
+
+        .postcard-preview img { width: 100%; display: block; border-radius: 4px; }
+
+        .poem-section {
+            margin-bottom: 30px;
+            padding: 0 15px;
+            text-align: left;
+            border-left: 2px solid var(--button-border);
+            margin-left: 10px;
+        }
+
+        .poem-line { margin-bottom: 15px; }
+        .es-poem { font-size: 0.95rem; color: var(--primary-text); display: block; font-weight: 500; }
+        .en-poem { font-size: 0.85rem; color: var(--accent-color); font-style: italic; display: block; }
+
+        .postcard-description { text-align: left; margin-bottom: 35px; padding: 0 10px; }
+
+        .description { font-size: 0.9rem; line-height: 1.7; color: var(--accent-color); font-weight: 300; }
+        .description .en { font-style: italic; opacity: 0.8; display: block; margin-top: 10px; font-size: 0.85rem; }
+
+        /* 雙語驚喜提示 */
+        .surprise-container {
+            margin-top: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: var(--accent-color);
+        }
+
+        .surprise-container i { margin-top: 4px; font-size: 0.9rem; }
+        .surprise-text { display: flex; flex-direction: column; gap: 2px; }
+        .surprise-es { font-size: 0.8rem; font-weight: 500; }
+        .surprise-en { font-size: 0.75rem; font-style: italic; opacity: 0.8; }
+
+        .cta-wrapper { display: flex; flex-direction: column; gap: 12px; }
+
+        .btn {
+            display: grid;
+            grid-template-columns: 50px 1fr;
+            align-items: center;
+            padding: 14px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .btn-whatsapp { background-color: var(--primary-text); color: #FFFFFF; }
+        .btn-whatsapp-outline { background-color: var(--button-bg); border: 1px solid var(--button-border); color: var(--primary-text); }
+
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(61, 56, 52, 0.08); }
+
+        .btn i { font-size: 1.2rem; text-align: center; }
+
+        .btn-content { display: flex; flex-direction: column; }
+        .btn span.main { font-size: 0.88rem; font-weight: 500; line-height: 1.2; }
+        .btn span.sub { font-size: 0.72rem; opacity: 0.75; font-style: italic; }
+
+        footer { margin-top: 60px; font-size: 0.75rem; color: var(--accent-color); opacity: 0.6; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo-container">
+            <img src="https://res.cloudinary.com/dhzabt1xr/image/upload/f_auto,q_auto/v1778185374/final_transparent_under1mb_mj2z57.png" alt="Huggia Logo">
+        </div>
+    </header>
+
+    <div class="header-info">
+        <span class="tag">Limited Edition</span>
+        <h2>Dulan Love | Un mensaje del alma</h2>
+    </div>
+
+    <div class="postcard-preview">
+        <!-- 木質案頭展示圖 -->
+        <img src="https://res.cloudinary.com/dhzabt1xr/image/upload/f_auto,q_auto/v1778196106/Screenshot_20260507_161453_Canva_x1mdh6.jpg" alt="Huggia Peru Series">
+    </div>
+
+    <div class="poem-section">
+        <div class="poem-line">
+            <span class="es-poem">Amor es el lenguaje que abraza cada cultura.</span>
+            <span class="en-poem">Love is the language, embracing every culture.</span>
+        </div>
+        <div class="poem-line">
+            <span class="es-poem">La música es el alma que despierta el espíritu.</span>
+            <span class="en-poem">Music is the soul, awakening inner spirits.</span>
+        </div>
+        <div class="poem-line">
+            <span class="es-poem">El arte es el puente hacia Pachamama.</span>
+            <span class="en-poem">Art is the bridge, connecting Earth Mother.</span>
+        </div>
+    </div>
+
+    <div class="postcard-description">
+        <p class="description">
+            Bendiciones que cruzan 18,000 km. Cada colección es un toque al alma. Elige la edición digital o deja que te envíe una postal escrita a mano desde Perú. Contáctame para más detalles.
+            <span class="en">Blessings across 18,000 km. Each collection is a touch to the soul. Choose the digital edition or let me send you a handwritten postcard from Peru. Contact me for more details.</span>
+            
+            <!-- 雙語驚喜提示區 -->
+            <div class="surprise-container">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <div class="surprise-text">
+                    <span class="surprise-es">Incluye una experiencia sonora secreta.</span>
+                    <span class="surprise-en">Includes a secret sound experience.</span>
+                </div>
+            </div>
+        </p>
+    </div>
+
+    <div class="cta-wrapper">
+        <a href="https://wa.me/qr/LA3IYUGC3GYGD1" class="btn btn-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <div class="btn-content">
+                <span class="main">Contactar por postal física</span>
+                <span class="sub">Contact for physical postcard</span>
+            </div>
+        </a>
+
+        <a href="https://wa.me/qr/LA3IYUGC3GYGD1" class="btn btn-whatsapp-outline" target="_blank">
+            <i class="fa-solid fa-comment-dots"></i>
+            <div class="btn-content">
+                <span class="main">Info sobre colección digital</span>
+                <span class="sub">Info for digital collection</span>
+            </div>
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2026 HUGGIA. BCN
+    </footer>
+</div>
+
+</body>
+</html>
